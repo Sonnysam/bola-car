@@ -1,0 +1,53 @@
+import { create } from "zustand";
+import { AuthStore } from "@/types/type";
+
+const useAuthStore = create<AuthStore>(
+  (set): AuthStore => ({
+    userToken: false,
+    name: "",
+    email: null,
+    phoneNo: null,
+    password: null,
+    confirmPassword: null,
+    userType: "user",
+    location: null,
+    uid: null,
+    profilePhoto: null,
+    amount: null,
+    date: "",
+    region: null,
+    userInfo: null,
+    serviceType: null,
+    wasteType: null,
+    amt: null,
+    title: null,
+    toggle: true,
+    numberPlate: null,
+    truckType: null,
+    houseNo: null,
+    setUserToken: (userToken) => set({ userToken }),
+    setName: (name) => set({ name }),
+    setEmail: (email) => set({ email }),
+    setPhoneNo: (phoneNo) => set({ phoneNo }),
+    setPassword: (password) => set({ password }),
+    setConfirmPassword: (confirmPassword) => set({ confirmPassword }),
+    setUserType: (userType) => set({ userType }),
+    setLocation: (location) => set({ location }),
+    setUid: (uid) => set({ uid }),
+    setProfilePhoto: (profilePhoto) => set({ profilePhoto }),
+    setAmount: (amount) => set({ amount }),
+    setDate: (date) => set({ date }),
+    setRegion: (region) => set({ region }),
+    setUserInfo: (userInfo) => set({ userInfo }),
+    setServiceType: (serviceType) => set({ serviceType }),
+    setWasteType: (wasteType) => set({ wasteType }),
+    setAmt: (amt) => set({ amt }),
+    setTitle: (title) => set({ title }),
+    toggleProfile: () => set((state) => ({ toggle: !state.toggle })),
+    setNumberPlate: (numberPlate) => set({ numberPlate }),
+    setTruckType: (truckType) => set({ truckType }),
+    setHouseNo: (houseNo) => set({ houseNo }),
+  })
+);
+
+export default useAuthStore;
